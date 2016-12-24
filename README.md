@@ -74,7 +74,7 @@ Write an Express app, that uses a file for persistent storage.
       {
         "id": 3,
         "author": "Kyle Simpson",
-        "title": "You Don't Know JS",
+        "title": "You Don't Know JS"
       }
     ]
     ```
@@ -85,9 +85,11 @@ Write an Express app, that uses a file for persistent storage.
   * add `"reset": "cp db/seed.json db/data.json"`
   * make sure that you have the trailing commas in the right places!
 1. `npm run reset`
-1. `ls`
+1. `ls db`
   * notice that there is now a `data.json` in the `db` directory
   * `db/data.json` is the file that we are going to modify
+  * if you make changes to `db/data.json` that you don't like and you want to start again,
+    `npm run reset` will reset `db/data.json` to be the same as `db/seed.json`
 1. `echo db/data.json >> .gitignore`
   * database files are typically not checked into source control, because they
     can get large, have nothing to do with development, and might hold sensitive
@@ -97,7 +99,7 @@ Write an Express app, that uses a file for persistent storage.
 
 1. Create a new file called `data_store.js`
 1. Open `data_store.js`
-1. Create an empty module in here.  We will fill it in the following steps.
+1. Create an empty module in here.  We will fill it in in the following steps.
 1. Open `app.js`
 1. Require your data_store module
 
