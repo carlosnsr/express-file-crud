@@ -248,3 +248,21 @@ If we use a Map or an object, and we load each item into it with a key (in our c
 we can instead look up each book much more quickly by its key (i.e. its ID).
 It then becomes trivial and fast to see if it exists, to find it, to update it, and to delete it.
 
+### Improve the error-checking of your data store
+
+#### Implement a safety-wrapper around the data store
+
+1. Implement a function called `get_store` that:
+  * Checks that the data store is not null
+  * If it is null, throw an exception
+  * If it is not null, return the data store
+1. Everywhere in your code that uses or returns the data store, should use this function instead
+  * *NOTE:* This excludes when you ASSIGN the data store in `load_from_file`,
+    because here we need to SET the data store as opposed to ACCESSING it
+
+#### Why?
+
+Right now, whenever we look up an item in the data store, we are assuming that
+the data store is available and was loaded successfully.
+However, this might not always be the case!  What if there was an error when loading it?
+What if the data store is not available?  (e.g. the memory or database or server is unavailable)
