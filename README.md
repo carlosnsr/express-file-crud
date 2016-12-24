@@ -228,4 +228,23 @@ Write an Express app, that uses a file for persistent storage.
 
 ## STRETCH
 
-Implement the data store using a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+### Improve the performance of your data store
+
+#### Implement the data store using a Map
+
+1. Use a [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map),
+  instead of an array, to store the books
+1. In `load_from_file`, iterate over the JSON array that you get from the data-file
+  * Load each book into the Map using its ID as a key
+1. Change `get_books` to return an array that is populated from the Map
+1. Change `get_book_by_id(id)` to use the Map's way of looking up an item by its key
+1. Likewise modify `add_book`, `update_book`, `delete_book`
+
+#### Why?
+
+Right now the store is an array.
+To find something in our array, we are checking every element's ID until we find the one that we want.
+If we use a Map or an object, and we load each item into it with a key (in our case, use its ID),
+we can instead look up each book much more quickly by its key (i.e. its ID).
+It then becomes trivial and fast to see if it exists, to find it, to update it, and to delete it.
+
