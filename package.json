@@ -1,0 +1,23 @@
+{
+  "name": "express-file-crud",
+  "version": "1.0.0",
+  "description": "Write an Express app, that uses a file for persistent storage.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/express-file-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/express-file-crud/issues"
+  },
+  "homepage": "https://github.com/gSchool/express-file-crud#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
