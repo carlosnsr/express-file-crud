@@ -150,11 +150,14 @@ Write an Express app, that uses a file for persistent storage.
 
 1. Open `data_store.js`
 1. Write a function called `write_to_file` that writes all the books that are in memory, back into the file
+  * if there is an error, throw it (i.e. `throw err`)
+  * if it is successful, log a success message to the console
 1. Make sure that you can read the data back out of the file by using `load_from_file`
 1. Do NOT export this function.
   * This function is going to be a "private" or "secret" function that only your module can use
-1. Do NOT export the above-mentioned variable
-  * We want to restrict access to only the functions that we export
+  * The management of the data store should be invisible to all outside libraries that use the module
+  * So we restrict access to only the functions that outside libraries need to do their tasks,
+    by only exporting functions and variables that we think they need to use
 
 ## Part 12: Implement adding a new book (with a unique id) to the data store
 
