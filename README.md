@@ -14,6 +14,7 @@ Write an Express app, that uses a file for persistent storage.
 * Your code must be perfectly indented.  If we can't read it, we aren't going to grade it.
 * Work in your project directory at all times
 * All access to the data (both in the file and in memory) can only be done through your `data_store` module
+  * This stresses the [Single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 
 ## Part 1: Set up your npm/Express project
 
@@ -108,6 +109,7 @@ Write an Express app, that uses a file for persistent storage.
 1. Open `data_store.js`
 1. Create a global variable, called `global_store`
 1. Do NOT export this global variable
+  * *Why not?* Single responsibility principle.  Only the `data_store` should handle all access to/from the data.
 1. Write a function called `load_from_file` that reads all the contents of the `db/data.json` file into memory
   * *TIP:* "into memory" means save it in a variable (let's use the above-created global variable)
   * File read/write is slow.  So we will work from memory as much as
