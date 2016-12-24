@@ -107,7 +107,7 @@ Write an Express app, that uses a file for persistent storage.
 ## Part 6: Implement a function that reads the contents of the file into memory
 
 1. Open `data_store.js`
-1. Create a global variable, called `global_store`
+1. Create a global variable, called `global_store`.  Set it to `null`
 1. Do NOT export this global variable
   * *Why not?* Single responsibility principle.  Only the `data_store` should handle all access to/from the data.
 1. Write a function called `load_from_file` that reads all the contents of the `db/data.json` file into memory
@@ -129,6 +129,7 @@ Write an Express app, that uses a file for persistent storage.
 1. Define a GET route at /api/books
 1. The route should send a json response with an array of all the books
   * use your data store's `get_all_books` function to achieve this
+1. If your data store is `null` (and so `get_all_books` returns null), respond with 404 Not Found
 
 ## Part 9: Implement finding a book by its ID
 
