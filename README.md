@@ -162,13 +162,13 @@ Write an Express app, that uses a file for persistent storage.
 ## Part 12: Implement adding a new book (with a unique id) to the data store
 
 1. Open `data_store.js`
-1. Create a new global variable called `LAST_ID`
-1. When you call `load_from_file`, update `LAST_ID` to be the largest ID that was loaded from the file
+1. Create a new global variable called `last_id`
+1. When you call `load_from_file`, update `last_id` to be the largest ID that was loaded from the file
 1. Write a function called `add_book` that:
   * takes an object as a parameter
   * gives it a unique ID
-    * *TIP:* just add 1 to `LAST_ID` and use that
-  * adds it to books that are already in memory
+    * *TIP:* just add 1 to `last_id` and use that
+  * adds it to the books that are already in memory
   * calls `write_to_file` to update the file
   * returns the added book (with its unique ID)
 1. Export this function
