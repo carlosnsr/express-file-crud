@@ -144,7 +144,7 @@ Write an Express app, that uses a file for persistent storage.
 1. Define a GET route at /api/books/:id
 1. The route should send a json response with the book that has the given ID
   * use your data store's `get_book_by_id(id)` function to achieve this
-1. If there is no book with the given ID, respond with 404 Not Found
+1. If there is no book with the given ID, respond with `404 Not Found`
 
 ## Part 11: Implement a function that updates the file with the current information
 
@@ -178,6 +178,8 @@ Write an Express app, that uses a file for persistent storage.
 1. Install and use `body-parser`
 1. Get the body of the request and pass it to `add_book`
 1. The route should send a json response with the newly-created book
+1. The status of the request should be `201 Created`
+1. Check `db/data.json` to be sure that your new book is in there with a unique ID
 
 ## Part 14: Implement updating a book in the data store
 
@@ -197,7 +199,8 @@ Write an Express app, that uses a file for persistent storage.
 
 1. Get the body of the request and pass it to `update_book`
 1. The route should send a json response with the newly-updated book
-1. If there is no book with the given ID, respond with 404 Not Found
+1. If there is no book with the given ID, respond with `404 Not Found`
+1. Check `db/data.json` to be sure that your book was updated in the file as expected
 
 ## Part 16: Implement deleting a book from the data store
 
@@ -216,7 +219,8 @@ Write an Express app, that uses a file for persistent storage.
 1. Define a DELETE route at /api/books/:id
 1. The route should send a json response with the book that was deleted
   * use your data store's `delete_book` function to achieve this
-1. If there is no book with the given ID, respond with 404 Not Found
+1. If there is no book with the given ID, respond with `404 Not Found`
+1. Check `db/data.json` to be sure that target book gone from the file
 
 ## Submit your work
 
