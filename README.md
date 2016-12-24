@@ -106,8 +106,10 @@ Write an Express app, that uses a file for persistent storage.
 ## Part 6: Implement a function that reads the contents of the file into memory
 
 1. Open `data_store.js`
+1. Create a global variable, called `global_store`
+1. Do NOT export this global variable
 1. Write a function called `load_from_file` that reads all the contents of the `db/data.json` file into memory
-  * *TIP:* "into memory" means save it in a variable (use a global variable)
+  * *TIP:* "into memory" means save it in a variable (let's use the above-created global variable)
   * File read/write is slow.  So we will work from memory as much as
     possible and only update the file when we have to.
 1. Export this function.
