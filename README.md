@@ -33,6 +33,7 @@ Write an Express app, that uses a file for persistent storage.
   * add ``"watch": "`npm bin`/nodemon"``
   * make sure that you have the trailing commas in the right places!
 1. `npm run watch`
+1. Leave nodemon running.  Open up a new terminal window/tab, and continue working from this new terminal.
 
 ## Part 3: Create an Express server
 
@@ -44,7 +45,8 @@ Write an Express app, that uses a file for persistent storage.
   * If not provided, default to 8000
   * Store the port in a `const`
 1. Use `app.listen` to bind and listen for connections on the above port
-1. Check that this works by running `nodemon app.js` in your directory
+1. Check that there are no errors in the terminal where nodemon is running
+1. Go to `http://localhost:8000`.  If everything is working, you should see `Cannot GET /`
 1. Git add, commit, push
 
 ## Part 4: Set up your database file
